@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #0A0C1B;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats__card--wrapper {
+    width: 100%;
+    max-width: 1440px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #1C1938;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0, 0.16);
+    overflow: hidden;
+}
+
+.stats__card--content {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    padding: 91px 97px;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats__card--content .main__heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.33em;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 45px;
+}
+
+.stats__card--content .description {
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.60);
+    margin-bottom: 90px;
+}
+
+.stats__card--content .main__heading span {
+    font-size: 50px;
+    font-weight: 700;
+    color: #A95BD4;
+}
+
+.stat__numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat__numbers h4 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    line-height: 42px;
+    text-transform: uppercase;
+}
+
+.stat__numbers h5 {
+    font-size: 17px;
+    font-weight: 400;
+    color:rgba(255, 255, 255, 0.60);
+    text-transform: uppercase;
+}
+
+
+
+.stats__card--img {
+    width: 45%;
+    height: 100%;
+    background: url('/images/image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats__card--img::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(169, 91, 212, 0.60);
+}
