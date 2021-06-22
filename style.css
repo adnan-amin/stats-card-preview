@@ -1,112 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 15px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
 }
 
-.wrapper {
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    background-color: #0A0C1B;
+}
+
+.container {
     width: 100%;
     height: 100vh;
-    background-color: #0A0C1B;
-    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.stats__card--wrapper {
+.card__container {
     width: 100%;
     max-width: 1440px;
     height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
     background-color: #1C1938;
     border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0,0,0, 0.16);
     overflow: hidden;
 }
 
-.stats__card--content {
+.content__left {
+    width: 50%;
+    padding: 91px 94px;
     display: flex;
     flex-direction: column;
-    width: 55%;
-    height: 100%;
-    padding: 91px 97px;
-    align-items: center;
-    justify-content: center;
 }
 
-.stats__card--content .main__heading {
-    font-family: 'Inter', sans-serif;
+.title {
     font-size: 50px;
     font-weight: 700;
     line-height: 60px;
     margin-bottom: 45px;
 }
 
-.stats__card--content .description {
-    font-size: 20px;
-    line-height: 33px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.60);
-    margin-bottom: 90px;
-}
-
-.stats__card--content .main__heading span {
-    font-size: 50px;
-    font-weight: 700;
+.title > span {
     color: #A95BD4;
 }
 
-.stat__numbers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.description {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    color: rgba(250, 250, 250, 0.6);
+    margin-bottom: 90px;
 }
 
-.stat__numbers h4 {
+.stats__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat__item h3 {
     font-size: 32px;
     font-weight: 700;
-    font-family: 'Inter', sans-serif;
-    line-height: 42px;
-    text-transform: uppercase;
+    line-height: 33px;
 }
 
-.stat__numbers h5 {
+.stat__item h6 {
     font-size: 17px;
+    line-height: 24px;
     font-weight: 400;
-    color:rgba(255, 255, 255, 0.60);
-    text-transform: uppercase;
+    color:rgba(250, 250, 250, 0.6);
 }
 
-
-
-.stats__card--img {
-    width: 45%;
+.content__right {
+    width: 50%;
     height: 100%;
-    background: url('/images/image-header-desktop.jpg');
+}
+
+.card__image {
+    height: 100%;
+    background-image: url('/images/image-header-desktop.jpg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    overflow: hidden;
 }
 
-.stats__card--img::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background-color: rgba(169, 91, 212, 0.60);
+
+@media only screen and (max-width: 1140px) {
+    .container {
+        height: auto;
+        padding: 3rem;
+    }
+
+    .card__container {
+        width: 100%;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    
+    .content__left {
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .content__right {
+        width: 100%;
+        height: 242px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .content__left {
+        padding: 1.5rem;
+    }
+    
+    .title {
+        font-size: 29px;
+        line-height: 35px;
+        margin-bottom: 20px;
+        /* text-align: center; */
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 40px;
+        /* text-align: center; */
+    }
+
+    .stats__container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .stat__item h3 {
+        font-size: 24px;
+        text-align: center;
+        line-height: 29px;
+    }
+
+    .stat__item h6 {
+        font-size: 12px;
+        line-height: 17px;
+    }
 }
